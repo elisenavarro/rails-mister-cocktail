@@ -6,6 +6,8 @@
   <%= c.submit "Create", class: "btn btn-primary" %>
 <% end %>
 
+<!-- Add an image uploader -->
+<%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
 <p><%= link_to "Return to Homepage", cocktails_path %></p>
 <br>
 

@@ -6,6 +6,7 @@
   <%= simple_form_for([@cocktail, @dose]) do |d| %>
   <!-- Tell simple form the path to take the user information -->
   <!-- Need both cocktail_id & ingredient_id to tell Dose ingredient to update -->
+    <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>
     <%= d.association :ingredient %>
     <%= d.input :description %>
     <%= d.submit "Update your Cocktail", class: "btn btn-primary" %>

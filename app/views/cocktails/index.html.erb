@@ -1,9 +1,22 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/background.png);">
+  <div class="container">
+    <h1>Le Wagon brings <strong>tech skills</strong> to <strong>creative people</strong>!</h1>
+    <p>Change your life and learn to code at one of our campuses around the world.</p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div>
+
 <div class="container">
   <h1>Cocktails Menu</h1>
   <div class= "card-product">
+    <%= simple_form_for(cocktail) do |c| %>
+      <%= c.input :photo %>
+      <%= c.input :photo_cache, as: :hidden %>
+    <% end %>
     <div class="card-product-infos">
       <% @cocktails.each do |cocktail| %>
       <!-- need link to cocktail show -->
+      <img <%= cl_image_tag @cocktail.photo, height: 300, width: 400, crop: :fill %>>
       <h3><%= link_to cocktail.name, cocktail_path(cocktail) %></h3>
       <% end %>
     </div>
