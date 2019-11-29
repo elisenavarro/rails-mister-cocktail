@@ -1,0 +1,28 @@
+<!-- PAGE FOR SINGLE COCKTAIL -->
+<div class="row">
+  <h1><%= @cocktail.name %></h1>
+  <div class="col-sm-12 col-md-6">
+  <!-- /cocktails/:cocktail_id/doses(.:format) -->
+  <%= simple_form_for([@cocktail, @dose]) do |d| %>
+  <!-- Tell simple form the path to take the user information -->
+  <!-- Need both cocktail_id & ingredient_id to tell Dose ingredient to update -->
+    <%= d.association :ingredient %>
+    <%= d.input :description %>
+    <%= d.submit "Update your Cocktail", class: "btn btn-primary" %>
+  <% end %>
+  <br>
+  <div>
+    <ul>
+<!-- in the cocktail show page, a cocktail has many doses -->
+<!-- iterate over doses for a single dose -->
+    <% @doses.each do |dose| %>
+      <li><%= dose.ingredient.name %></li>
+      <li><%= dose.description %></li>
+    <!-- direct to delete path and pass single dose -->
+      <%= link_to 'Delete a Dose', dose_path(dose), method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+    </ul>
+  </div>
+  <p><%= link_to "Return to Homepage", cocktails_path %></p>
+</div>
+

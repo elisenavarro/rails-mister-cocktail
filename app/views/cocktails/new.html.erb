@@ -1,0 +1,12 @@
+<!-- FORM FOR CREATING NEW COCKTAIL -->
+<h1>Create a New Cocktail</h1>
+
+<%= simple_form_for(@cocktail) do |c| %>
+  <%= c.input :name %>
+  <%= c.submit "Create", class: "btn btn-primary" %>
+<% end %>
+
+<p><%= link_to "Return to Homepage", cocktails_path %></p>
+<br>
+
+<p>Find me in app/views/cocktails/new.html.erb</p>
