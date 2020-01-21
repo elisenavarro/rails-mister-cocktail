@@ -37,24 +37,24 @@
   </div>
 
   <h3>Reviews</h3>
-  <% if @cocktail.reviews.empty? %>
+<!--   <#% if @cocktail.reviews.empty? %>
     <p>Be the first to leave a review</p>
-  <% else %>
+  <#% else %>
     <ul class="list-group">
-      <% @cocktail.review.each do |review| %>
+      <#% @cocktail.review.each do |review| %>
         <li class="list-group-item d-flex justify-content-between align-items-center">
           <span class="badge badge-primary badge-pill">
-            <% counter = 0 %>
-            <% 5.times do %>
-              <i class="fa <%= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
-              <% counter += 1 %>
-            <% end %>
+            <#% counter = 0 %>
+            <#% 5.times do %>
+              <i class="fa <%#= review.rating > counter ? 'fa-star' : 'fa-star-o' %>"></i>
+              <#% counter += 1 %>
+            <#% end %>
           </span>
-          <%= review.content %>
+          <%#= review.content %>
         </li>
-      <% end %>
+      <#% end %>
     </ul>
-  <% end %>
+  <#% end %> -->
 
   <%= render "reviews/new", cocktail: @cocktail, review: @review %>
 
