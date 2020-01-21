@@ -15,8 +15,9 @@ class DosesController < ApplicationController
     # OVERRIDE THE NIL WITH DETAILS OF THE COCKTAIL (FROM USER)
     @dose.cocktail = @cocktail
     if @dose.save
-      redirect_to cocktails_path
+      redirect_to cocktails_path(@cocktail)
     else
+      @review = Review.new
       render 'cocktails/show'
     end
   end
