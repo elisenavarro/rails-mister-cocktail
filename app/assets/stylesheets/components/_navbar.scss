@@ -1,4 +1,4 @@
-.navbar-lewagon {
+.navbar {
   justify-content: space-between;
   background: white;
   height: 70px;
@@ -8,10 +8,10 @@
   align-items : center;
 }
 
-.navbar-lewagon .navbar-collapse {
+.navbar .navbar-collapse {
   flex-grow: 0;
 }
 
-.navbar-lewagon .navbar-brand img {
+.navbar .navbar-brand img {
   width: 40px;
 }
