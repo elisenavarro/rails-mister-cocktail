@@ -8,8 +8,19 @@
 # require 'open-uri'
 # require 'json'
 
+# Cocktail Ingredients
 Ingredient.create(name: "lemon")
 Ingredient.create(name: "ice")
 Ingredient.create(name: "mint leaves")
 Ingredient.create(name: "sweet vermouth")
 Ingredient.create(name: "orange bitters")
+Ingredient.create(name: "orange peel")
+Ingredient.create(name: "aperol")
+Ingredient.create(name: "egg white")
+
+# Create Cocktails
+Cocktail.create(name: "Mojito")
+Cocktail.create(name: "Margarita")
+Cocktail.create(name: "Aperol Spritz")
+Cocktail.create(name: "Old Fashioned")
+Cocktail.create(name: "Pisco Sour")
