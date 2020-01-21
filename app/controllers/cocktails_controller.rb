@@ -24,7 +24,7 @@ class CocktailsController < ApplicationController
     @dose = Dose.new
     # can remove doses#new from router, controller, view
     # > bc new dose lives on the cocktail show page
-    @review = Review.new
+    # @review = Review.new
   end
 
   private
