@@ -1,6 +1,6 @@
 
 .cards-grid {
-  display: grid;
+  display: flex;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-bottom: 30px;
@@ -17,17 +17,14 @@
   border-radius: 5px;
 }
 
-.card-img {
+.card-cocktail-img {
   position: relative;
   height: 180px;
   width: 100%;
   background-position: center;
   background-size: cover;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   color: white;
   font-size: 24px;
@@ -39,11 +36,8 @@
 
 .card-description {
   padding: 16px;
-  display: -webkit-box;
   display: flex;
-  -webkit-box-pack: justify;
   justify-content: space-between;
-  -webkit-box-align: end;
   align-items: flex-end;
 }
 
